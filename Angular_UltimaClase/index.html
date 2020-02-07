@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fábrica / Servicio
+    </title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="js/controlador.js"></script>
+
+</head>
+
+<body ng-app="miApp">
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Fábrica / Servicio</h1>
+            <br>
+            <div class="alert alert-info" ng-controller="miCtrl1">
+                <form class="form-inline my-3">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Mensaje" ng-model="nuevoDato">
+                    <button class="btn btn-outline-info my-2 my-sm-0" type="submit" ng-click="modificar(nuevoDato)">Enviar</button>
+                </form>
+                <h3>{{dato.mensaje}}</h3>
+            </div>
+
+            <div class="alert alert-dark" ng-controller="miCtrl2">
+                <h3>{{dato.mensaje}}</h3>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
